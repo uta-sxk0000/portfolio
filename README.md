@@ -1,6 +1,6 @@
-# Sagar Khadka Portfolio
+# Sagar Khadka
 
-Modern personal portfolio website for **Sagar Khadka**, a Computer Science student and aspiring Software Engineer focused on software development, AI, cybersecurity, systems, and full-stack projects.
+Modern personal portfolio website of myself, a Computer Science student and aspiring Software Engineer focused on software development, AI, cybersecurity, systems, and full-stack projects.
 
 Live site: [khadkasagar.name.np](https://khadkasagar.name.np)
 
