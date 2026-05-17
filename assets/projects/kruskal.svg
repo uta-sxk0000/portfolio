@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Kruskal MST graph visualizer illustration</title>
+  <desc id="desc">A weighted graph with highlighted minimum spanning tree edges.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0F19"/>
+      <stop offset="1" stop-color="#111A2E"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <g stroke="#334155" stroke-width="4" opacity=".75">
+    <path d="M178 166 372 116 584 172 752 112 820 352 596 430 382 362 154 390 178 166 584 172 382 362 752 112 372 116 596 430"/>
+  </g>
+  <g stroke="url(#edge)" stroke-width="9" stroke-linecap="round" filter="drop-shadow(0 0 14px rgba(34,211,238,.35))">
+    <path d="M178 166 372 116 584 172 752 112"/>
+    <path d="M584 172 596 430 382 362 154 390"/>
+  </g>
+  <g fill="#0F172A" stroke="#22D3EE" stroke-width="5">
+    <circle cx="178" cy="166" r="36"/><circle cx="372" cy="116" r="36"/><circle cx="584" cy="172" r="36"/>
+    <circle cx="752" cy="112" r="36"/><circle cx="820" cy="352" r="36"/><circle cx="596" cy="430" r="36"/>
+    <circle cx="382" cy="362" r="36"/><circle cx="154" cy="390" r="36"/>
+  </g>
+  <g fill="#F8FAFC" font-family="Inter, Arial" font-size="22" font-weight="900" text-anchor="middle">
+    <text x="178" y="174">A</text><text x="372" y="124">B</text><text x="584" y="180">C</text><text x="752" y="120">D</text>
+    <text x="820" y="360">E</text><text x="596" y="438">F</text><text x="382" y="370">G</text><text x="154" y="398">H</text>
+  </g>
+  <text x="74" y="510" fill="#22D3EE" font-family="JetBrains Mono, Consolas" font-size="23" font-weight="700">sort(edges) → union_find → minimum spanning tree</text>
+</svg>

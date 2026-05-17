@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">AI Pacman search project illustration</title>
+  <desc id="desc">A neon maze with a search agent and path nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0F19"/>
+      <stop offset="1" stop-color="#1B1235"/>
+    </linearGradient>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDE047"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <g fill="none" stroke="#3B82F6" stroke-width="14" stroke-linecap="round" opacity=".78">
+    <path d="M122 98h716v364H122z"/>
+    <path d="M216 98v92h176V98M568 98v92h176V98"/>
+    <path d="M216 462v-92h176v92M568 462v-92h176v92"/>
+    <path d="M122 280h188M650 280h188"/>
+    <path d="M392 190v180h176V190"/>
+  </g>
+  <g fill="#22D3EE" opacity=".85">
+    <circle cx="170" cy="142" r="7"/><circle cx="260" cy="142" r="7"/><circle cx="500" cy="142" r="7"/><circle cx="790" cy="142" r="7"/>
+    <circle cx="170" cy="420" r="7"/><circle cx="260" cy="420" r="7"/><circle cx="500" cy="420" r="7"/><circle cx="790" cy="420" r="7"/>
+    <circle cx="340" cy="280" r="7"/><circle cx="620" cy="280" r="7"/>
+  </g>
+  <path d="M288 280a70 70 0 1 1 58 69l-58-69 58-69a70 70 0 0 1-58 69Z" fill="url(#agent)" filter="drop-shadow(0 0 20px rgba(34,211,238,.35))"/>
+  <path d="M468 280h210" stroke="#FDE047" stroke-width="6" stroke-linecap="round" stroke-dasharray="12 18"/>
+  <circle cx="708" cy="280" r="34" fill="#A855F7"/>
+  <text x="690" y="288" fill="#fff" font-family="Inter, Arial" font-size="24" font-weight="900">AI</text>
+  <text x="126" y="520" fill="#A8B3C7" font-family="JetBrains Mono, Consolas" font-size="22">search(frontier) → best_next_state</text>
+</svg>
