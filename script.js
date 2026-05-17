@@ -64,6 +64,17 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
             return;
         }
 
+        if (targetId === "#top") {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            history.pushState(null, "", targetId);
+            navMenu.classList.remove("active");
+            navToggle.classList.remove("active");
+            navToggle.setAttribute("aria-expanded", "false");
+            body.classList.remove("menu-open");
+            return;
+        }
+
         const target = document.querySelector(targetId);
 
         if (!target) {
@@ -196,6 +207,12 @@ commandButtons.forEach((button) => {
         closeCommandPalette();
 
         if (command === "scroll") {
+            if (target === "#top") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                history.pushState(null, "", target);
+                return;
+            }
+
             document.querySelector(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
             history.pushState(null, "", target);
             return;
