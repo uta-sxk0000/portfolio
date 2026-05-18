@@ -171,13 +171,37 @@
         <!-- Hero -->
         <section class="hero section" id="home">
             <div class="hero-shell container">
-                <aside class="hero-visual profile-showcase-card reveal tilt-card" aria-label="Profile preview">
+                <div class="hero-content reveal">
+                    <p class="eyebrow">Computer Science Student | Software Engineer</p>
+                    <h1 class="hero-title">Sagar Khadka</h1>
+                    <p class="hero-role-line">
+                        Building <span id="roleRotator">secure software</span> with CS fundamentals, AI curiosity, and product-minded execution.
+                    </p>
+                    <p class="hero-description">
+                        I design practical software experiences across web, systems, AI, and cybersecurity with a focus on clarity,
+                        reliability, and real-world impact.
+                    </p>
+
+                    <div class="hero-actions" aria-label="Primary actions">
+                        <a class="btn btn-primary magnetic" href="resume.pdf" download>Download Resume</a>
+                        <a class="btn btn-glass magnetic" href="#projects">View Projects</a>
+                        <a class="btn btn-outline magnetic" href="#contact">Contact</a>
+                    </div>
+
+                    <div class="hero-social-row" aria-label="Social profiles">
+                        <a class="btn btn-icon magnetic" href="https://github.com/uta-sxk0000" target="_blank" rel="noopener" aria-label="Open GitHub"><svg class="icon"><use href="#icon-github"></use></svg></a>
+                        <a class="btn btn-icon magnetic" href="https://www.linkedin.com/in/sagarkhadkaa/" target="_blank" rel="noopener" aria-label="Open LinkedIn"><svg class="icon"><use href="#icon-linkedin"></use></svg></a>
+                        <a class="btn btn-icon magnetic" href="https://www.instagram.com/sagar_khadkaa/" target="_blank" rel="noopener" aria-label="Open Instagram"><svg class="icon"><use href="#icon-instagram"></use></svg></a>
+                    </div>
+                </div>
+
+                <aside class="hero-visual profile-showcase-card reveal tilt-card" id="heroSpotlight" aria-label="Profile preview">
                     <div class="profile-card-top">
                         <p class="status-pill">Open to relevant job opportunities</p>
                         <span class="profile-chip">CS Student</span>
                     </div>
 
-                    <div class="portrait-card">
+                    <div class="portrait-card minimal-profile-row">
                         <div class="portrait-frame">
                             <div class="headshot-placeholder">
                                 <img class="profile-photo" src="assets/profile/sagar-profile.png" alt="Sagar Khadka profile photo">
@@ -186,23 +210,24 @@
                             <div class="orbit orbit-two"></div>
                         </div>
                         <div class="profile-meta">
-                            <h1>Sagar Khadka</h1>
-                            <p>Software Engineering | AI | Cybersecurity | Systems</p>
+                            <span class="profile-meta-label">Primary direction</span>
+                            <h2>Software Engineering</h2>
+                            <p>AI-aware, security-minded, systems-focused.</p>
                         </div>
                     </div>
 
-                    <div class="hero-focus-grid">
+                    <div class="hero-signal-grid">
                         <article>
-                            <span>Current focus</span>
-                            <strong>Software Engineering</strong>
+                            <strong>6+</strong>
+                            <span>Projects</span>
                         </article>
                         <article>
-                            <span>Exploring</span>
-                            <strong>AI + Cybersecurity</strong>
+                            <strong>AI</strong>
+                            <span>Applied Focus</span>
                         </article>
                         <article>
-                            <span>Building</span>
-                            <strong>Systems &amp; Web Apps</strong>
+                            <strong>CS</strong>
+                            <span>Core Foundation</span>
                         </article>
                     </div>
 
@@ -213,24 +238,12 @@
                         <span><svg class="skill-image"><use href="#skill-ai"></use></svg>AI</span>
                     </div>
 
+                    <button class="hero-command-card" id="heroCommandOpen" type="button">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        <span>Command Center</span>
+                        <kbd>Ctrl K</kbd>
+                    </button>
                 </aside>
-
-                <div class="hero-content reveal">
-                    <p class="eyebrow">Computer Science Student | Software Engineer</p>
-                    <p class="hero-description">
-                        From algorithms and systems to AI-powered tools, I turn Computer Science fundamentals
-                        into polished, secure, real-world software built for impact.
-                    </p>
-
-                    <div class="hero-actions" aria-label="Primary actions">
-                        <a class="btn btn-primary magnetic" href="resume.pdf" download>Download Resume</a>
-                        <a class="btn btn-glass magnetic" href="https://github.com/uta-sxk0000" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-github"></use></svg>GitHub</a>
-                        <a class="btn btn-glass magnetic" href="https://www.linkedin.com/in/sagarkhadkaa/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-linkedin"></use></svg>LinkedIn</a>
-                        <a class="btn btn-glass magnetic" href="https://www.instagram.com/sagar_khadkaa/" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-instagram"></use></svg>Instagram</a>
-                        <a class="btn btn-outline magnetic" href="#contact">Contact</a>
-                        <button class="btn btn-outline magnetic" id="heroCommandOpen" type="button">Command Center</button>
-                    </div>
-                </div>
             </div>
         </section>
 

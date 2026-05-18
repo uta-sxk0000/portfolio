@@ -28,12 +28,35 @@ const commandSearch = document.querySelector("#commandSearch");
 const commandButtons = document.querySelectorAll("#commandList button");
 const commandOpenButtons = document.querySelectorAll("#commandOpen, #heroCommandOpen");
 const commandCloseButtons = document.querySelectorAll("[data-command-close]");
+const heroSpotlight = document.querySelector("#heroSpotlight");
+const roleRotator = document.querySelector("#roleRotator");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 body.classList.add("reveal-enabled");
 document.querySelectorAll(".hero .reveal").forEach((item) => item.classList.add("visible"));
 skillTags.forEach((tag) => tag.style.setProperty("--skill-level", tag.dataset.level));
+
+// Minimal hero role rotator.
+if (roleRotator && !prefersReducedMotion) {
+    const roles = [
+        "secure software",
+        "AI-assisted tools",
+        "full-stack systems",
+        "clean user experiences"
+    ];
+    let roleIndex = 0;
+
+    window.setInterval(() => {
+        roleRotator.classList.add("switching");
+
+        window.setTimeout(() => {
+            roleIndex = (roleIndex + 1) % roles.length;
+            roleRotator.textContent = roles[roleIndex];
+            roleRotator.classList.remove("switching");
+        }, 220);
+    }, 2600);
+}
 
 const hideLoader = () => {
     loader.classList.add("hidden");
@@ -252,6 +275,22 @@ if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
         cursorGlow.style.left = x;
         cursorGlow.style.top = y;
     }, { passive: true });
+
+    if (heroSpotlight) {
+        heroSpotlight.addEventListener("pointermove", (event) => {
+            const rect = heroSpotlight.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+            heroSpotlight.style.setProperty("--spotlight-x", `${x}%`);
+            heroSpotlight.style.setProperty("--spotlight-y", `${y}%`);
+        });
+
+        heroSpotlight.addEventListener("pointerleave", () => {
+            heroSpotlight.style.setProperty("--spotlight-x", "50%");
+            heroSpotlight.style.setProperty("--spotlight-y", "40%");
+        });
+    }
 }
 
 // 3D tilt effect for premium cards.
