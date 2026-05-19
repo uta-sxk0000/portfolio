@@ -229,13 +229,6 @@ commandButtons.forEach((button) => {
 });
 
 window.addEventListener("keydown", (event) => {
-    const isCommandShortcut = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k";
-
-    if (isCommandShortcut) {
-        event.preventDefault();
-        openCommandPalette();
-    }
-
     if (event.key === "Escape" && commandPalette.classList.contains("open")) {
         closeCommandPalette();
     }
