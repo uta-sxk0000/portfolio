@@ -1,17 +1,16 @@
 /* =========================================================
    Premium Portfolio Interactions
    Loading screen, typing effect, scroll progress, active nav,
-   project filters, cursor glow, tilt cards, and particles.
+   project filters, floating back-to-top control, tilt cards, and particles.
    ========================================================= */
 
 const body = document.body;
 const loader = document.querySelector("#loader");
 const scrollProgress = document.querySelector("#scrollProgress");
-const cursorDot = document.querySelector("#cursorDot");
-const cursorGlow = document.querySelector("#cursorGlow");
 const navToggle = document.querySelector("#navToggle");
 const navMenu = document.querySelector("#navMenu");
 const header = document.querySelector(".site-header");
+const backToTop = document.querySelector("#backToTop");
 const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("main section[id]");
 const revealItems = document.querySelectorAll(".reveal");
@@ -98,6 +97,7 @@ const updateScrollUI = () => {
 
     scrollProgress.style.width = `${progress}%`;
     header.classList.toggle("scrolled", window.scrollY > 12);
+    backToTop?.classList.toggle("visible", window.scrollY > 520);
 
     let activeId = "home";
     sections.forEach((section) => {
@@ -114,6 +114,13 @@ const updateScrollUI = () => {
 
 updateScrollUI();
 window.addEventListener("scroll", updateScrollUI, { passive: true });
+window.addEventListener("hashchange", () => window.setTimeout(updateScrollUI, 80));
+window.addEventListener("load", () => window.setTimeout(updateScrollUI, 120));
+
+backToTop?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    history.pushState(null, "", "#top");
+});
 
 // Scroll reveal.
 if ("IntersectionObserver" in window) {
@@ -233,19 +240,6 @@ window.addEventListener("keydown", (event) => {
         closeCommandPalette();
     }
 });
-
-// Cursor glow.
-if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
-    window.addEventListener("pointermove", (event) => {
-        const x = `${event.clientX}px`;
-        const y = `${event.clientY}px`;
-
-        cursorDot.style.left = x;
-        cursorDot.style.top = y;
-        cursorGlow.style.left = x;
-        cursorGlow.style.top = y;
-    }, { passive: true });
-}
 
 // 3D tilt effect for premium cards.
 if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {

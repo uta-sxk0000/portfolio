@@ -26,8 +26,6 @@
 
     <!-- Scroll progress and animated page effects -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
     <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
 
     <!-- Local SVG icon sprite: no external icon library required. -->
@@ -742,6 +740,10 @@
             <a href="#top">Back to top</a>
         </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <span aria-hidden="true">↑</span>
+    </button>
 
     <script src="script.js"></script>
 </body>
